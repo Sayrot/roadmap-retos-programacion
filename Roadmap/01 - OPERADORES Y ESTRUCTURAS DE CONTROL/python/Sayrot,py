@@ -1,0 +1,133 @@
+'''
+Operdadores y Estructuras de Control
+'''
+
+# Operadores Aritméticos
+print(f"Suma: {5 + 3}")             # Suma
+print(f"Resta: {5 - 3}")            # Resta   
+print(f"Multiplicación: {5 * 3}")   # Multiplicación
+print(f"División: {5 / 3}")         # División
+print(f"Módulo: {5 % 3}")           # Módulo
+print(f"Exponente: {5 ** 3}")       # Exponente
+print(f"División Entera: {5 // 3}") # División Entera
+print()
+
+#Operadores de Comparación
+print(f"¿5 es igual a 3?: {5 == 3}")           # Igualdad
+print(f"¿5 es diferente de 3?: {5 != 3}")      # Desigualdad
+print(f"¿5 es mayor que 3?: {5 > 3}")          # Mayor que
+print(f"¿5 es menor que 3?: {5 < 3}")          # Menor que
+print(f"¿5 es mayor o igual que 3?: {5 >= 3}") # Mayor o igual que
+print(f"¿5 es menor o igual que 3?: {5 <= 3}") # Menor o igual que
+print()
+
+#Operadores Lógicos 
+print(f"¿5 es mayor que 3 y menor que 10?: {5 > 3 and 5 < 10}")  # AND
+print(f"¿5 es mayor que 3 o menor que 2?: {5 > 3 or 5 < 2}")     # OR
+print(f"¿No es cierto que 5 es menor que 3?: {not (5 < 3)}")     # NOT
+print()
+
+#Operadores de Asignación
+my_number = 4                            # Asignación simple
+print(f"Valor inicial: {my_number}")     
+my_number += 3
+print(f"Después de += 3: {my_number}")   # Suma y asignación
+my_number -= 2  
+print(f"Después de -= 2: {my_number}")   # Resta y asignación
+my_number *= 4
+print(f"Después de *= 4: {my_number}")   # Multiplicación y asignación
+my_number /= 2      
+print(f"Después de /= 2: {my_number}")   # División y asignación
+my_number %= 3
+print(f"Después de %= 3: {my_number}")   # Módulo y asignación   
+my_number **= 2
+print(f"Después de **= 2: {my_number}")  # Exponente y asignación
+my_number //= 2                         
+print(f"Después de //= 2: {my_number}")  # División entera y asignación 
+print()
+
+
+#Operdadores de Identidad
+my_new_number = my_number
+print(f"¿my_new_number es my_number?: {my_new_number is my_number}")         # is
+print(f"¿my_new_number no es my_number?: {my_new_number is not my_number}") # is not
+print() 
+
+#Operadores de Pertenencia
+print(f"¿3 está en la lista?: {3 in [1, 2, 3, 4, 5]}")        # in
+print(f"¿6 no está en la lista?: {6 not in [1, 2, 3, 4, 5]}")  # not in
+print()
+
+#Operadores Bit a Bit
+print(f"AND Bit a Bit: {5 & 3}")  # AND
+print(f"OR Bit a Bit: {5 | 3}")   # OR
+print(f"XOR Bit a Bit: {5 ^ 3}")  # XOR
+print(f"NOT Bit a Bit: {~5}")      # NOT
+print(f"Desplazamiento a la izquierda: {5 << 1}")  # Desplazamiento a la izquierda
+print(f"Desplazamiento a la derecha: {5 >> 1}")     # Desplazamiento a la derecha
+print() 
+
+
+'''
+Estructuras de Control
+'''
+
+# Estructura Condicional If, Elif, Else
+age = 20       
+if age < 18:
+    print("Eres menor de edad.")
+elif age == 18:
+    print("Tienes 18 años.")
+else:
+    print("Eres mayor de edad.")
+print() 
+
+# Estructura de Control While
+count = 0
+while count < 5:
+    print(f"Contador: {count}")
+    count += 1      
+print()
+
+# Estructura de Control For
+for i in range(5):
+    print(f"Número: {i}")   
+print()
+
+# Estructura de Control Try, Except, Finally
+try:
+    result = 10 / 0 # Esto generará una excepción
+except ZeroDivisionError:
+    print("Error: División por cero no permitida.")
+finally:
+    print("Bloque finally ejecutado.")
+print()
+
+# Estructura de Control With    
+with open('example.txt', 'w') as file:
+    file.write("Hola, Mundo!")
+print("Archivo escrito con éxito.")
+print()
+
+# Estructura de Control Break, Continue, Pass
+for i in range(10):
+    if i == 5:
+        print("Se encontró el 5, saliendo del bucle.")
+        break  # Sale del bucle cuando i es 5
+    if i % 2 == 0:
+        continue  # Salta a la siguiente iteración si i es par
+    print(f"Número impar: {i}") 
+else:
+    print("Bucle completado sin interrupciones.")
+print("Fin del programa.")
+print()
+
+'''
+Extra
+'''
+
+for number in range(10, 56):
+    if number % 2 == 0 and number != 16 and number % 3 == 0: 
+        print(number)
+
+    
